@@ -21,6 +21,8 @@
         <jackson.version>2.13.5</jackson.version>
         <!-- SQLite -->
         <sqlite-jdbc.version>3.42.0.0</sqlite-jdbc.version>
+        <!-- jbcrypt -->
+        <jbcrypt.version>0.4</jbcrypt.version>
     </properties>
     <dependencies>
         <!-- logging Support -->
@@ -72,6 +74,13 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>${sqlite-jdbc.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mindrot/jbcrypt -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>${jbcrypt.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <resources>
