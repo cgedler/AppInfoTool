@@ -22,27 +22,16 @@ public class MenuHandler {
         ArrayList<MainMenu> menu = readfile();
         try {
             for (MainMenu mainmenu : menu) {
-                System.out.println(mainmenu.getName());
-                
-                for (SubMenu submenu : mainmenu.getSub()) {
-                    System.out.println(submenu.getName());
-                }
-                
-            }
-            /*
-            for (int i = 0; i < menu.size(); i++) {
                 JMenu mnuTemp = new JMenu();
-                mnuTemp.setText(menu.get(i).getName());
-                for (int j = 0; j < menu.get(i).getSub().size(); j++) {
-                    System.out.println(menu.get(i).getSub().get(j).getName());
-                    //JMenuItem submTemp = new JMenuItem();
-                    //submTemp.setText(submen.getName());
-                    //submTemp.addActionListener(new MenuAction(submen.getCode()));
-                    //mnuTemp.add(submTemp);
+                mnuTemp.setText(mainmenu.getName());     
+                for (SubMenu submenu : mainmenu.getSub()) {
+                    JMenuItem submTemp = new JMenuItem();
+                    submTemp.setText(submenu.getName());
+                    submTemp.addActionListener(new MenuAction(submenu.getCode()));
+                    mnuTemp.add(submTemp);
                 }
                 menus.add(mnuTemp);
             }
-             */
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,10 +41,9 @@ public class MenuHandler {
     private ArrayList<MainMenu> readfile() {
         ArrayList<MainMenu> menu = new ArrayList<MainMenu>();
         try {
-            File file = new File(this.getClass().getClassLoader().getResource("main.json").getFile());
+            File file = new File(this.getClass().getClassLoader().getResource("mainmenu.json").getFile());
             ObjectMapper mapper = new ObjectMapper();
-            menu = mapper.readValue(file, new TypeReference<ArrayList<MainMenu>>() {
-            });
+            menu = mapper.readValue(file, new TypeReference<ArrayList<MainMenu>>(){});
         } catch (Exception e) {
             e.printStackTrace();
         }
