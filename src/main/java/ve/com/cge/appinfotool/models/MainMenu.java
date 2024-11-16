@@ -10,13 +10,15 @@ import java.util.List;
 public class MainMenu {
     
     private String name;
+    private String icon;
     private List<SubMenu> sub;
 
     public MainMenu() {
     }
 
-    public MainMenu(String name, List<SubMenu> sub) {
+    public MainMenu(String name, String icon, List<SubMenu> sub) {
         this.name = name;
+        this.icon = icon;
         this.sub = sub;
     }
 
@@ -26,6 +28,14 @@ public class MainMenu {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     public List<SubMenu> getSub() {

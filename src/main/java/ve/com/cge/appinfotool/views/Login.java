@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -64,21 +65,25 @@ public class Login extends JFrame {
         }
 
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
-        IconFontSwing.register(FontAwesome.getIconFont());
+        
+        ImageIcon icoLogin = new ImageIcon(this.getClass().getClassLoader().getResource("image/cryptography.png"));
         Icon icoUser = IconFontSwing.buildIcon(FontAwesome.USER_CIRCLE_O, 15, new Color(219, 20, 186));
         Icon icoPwd = IconFontSwing.buildIcon(FontAwesome.KEY, 15, new Color(219, 20, 186));
         Icon icoOk = IconFontSwing.buildIcon(FontAwesome.CHECK, 15, new Color(20, 219, 30));
         Icon icoCancel = IconFontSwing.buildIcon(FontAwesome.TIMES, 15, new Color(219, 113, 20));
 
         JPanel panMain = new JPanel();
-        JPanel panLeft = new JPanel();
-        JPanel panRight = new JPanel();
+        JPanel panLblUsername = new JPanel();
+        JPanel panLblPwd = new JPanel();
+        JPanel panCmbUsers = new JPanel();
+        JPanel panPwd = new JPanel();
         JPanel panBtnOk = new JPanel();
         JPanel panBtnCancel = new JPanel();
 
         lblUsername.setHorizontalAlignment(SwingConstants.RIGHT);
         lblUsername.setIcon(icoUser);
         lblUsername.setText(ResourceBundle.getBundle(appInfo.getLOCALE()).getString("USERNAME"));
+        //lblUsername.setBounds(10, 10, 80, 25);
         lblPassword.setIcon(icoPwd);
         lblPassword.setHorizontalAlignment(SwingConstants.RIGHT);
         lblPassword.setText(ResourceBundle.getBundle(appInfo.getLOCALE()).getString("PASSWORD"));
@@ -89,26 +94,31 @@ public class Login extends JFrame {
         btnCancel.setText(ResourceBundle.getBundle(appInfo.getLOCALE()).getString("BTNCANCEL"));
         btnCancel.addActionListener(new ExitAction());
 
-        panMain.setLayout(new GridLayout(2, 2));
-        panLeft.setLayout(new GridLayout(2, 1));
-        panRight.setLayout(new GridLayout(2, 1));
+        panMain.setLayout(new GridLayout(3, 2));
+        panLblUsername.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        panLblPwd.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        panCmbUsers.setLayout(new FlowLayout(FlowLayout.LEFT));
+        panPwd.setLayout(new FlowLayout(FlowLayout.LEFT));
         panBtnOk.setLayout(new FlowLayout(FlowLayout.CENTER));
         panBtnCancel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        panLeft.add(lblUsername);
-        panLeft.add(lblPassword);
-        panRight.add(cmbUsers);
-        panRight.add(pwd);
-        panMain.add(panLeft);
-        panMain.add(panRight);
+        panLblUsername.add(lblUsername);
+        panLblPwd.add(lblPassword);
+        panCmbUsers.add(cmbUsers);
+        panPwd.add(pwd);
         panBtnOk.add(btnOk);
-        panMain.add(panBtnOk);
-        panBtnCancel.add(btnCancel);
+        panBtnCancel.add(btnCancel);        
+        panMain.add(panLblUsername);
+        panMain.add(panCmbUsers);
+        panMain.add(panLblPwd);
+        panMain.add(panPwd);
+        panMain.add(panBtnOk); 
         panMain.add(panBtnCancel);
 
         setContentPane(panMain);
         setTitle("Login");
         setBounds(((int) dimension.getWidth() / 2), ((int) dimension.getHeight() / 2), 400, 130);
         setResizable(false);
+        setIconImage(icoLogin.getImage());
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Check----
         setVisible(true);
     }

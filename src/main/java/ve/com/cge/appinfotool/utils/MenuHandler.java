@@ -2,14 +2,20 @@ package ve.com.cge.appinfotool.utils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import jiconfont.icons.font_awesome.FontAwesome;
+import jiconfont.swing.IconFontSwing;
 import ve.com.cge.appinfotool.controllers.MenuAction;
 import ve.com.cge.appinfotool.models.MainMenu;
 import ve.com.cge.appinfotool.models.SubMenu;
+import ve.com.cge.appinfotool.views.MDIApp;
 
 /**
  *
@@ -17,17 +23,21 @@ import ve.com.cge.appinfotool.models.SubMenu;
  */
 public class MenuHandler {
 
-    public ArrayList<JMenu> menuList() {
+    public ArrayList<JMenu> menuList(MDIApp app) {
         ArrayList<JMenu> menus = new ArrayList<JMenu>();
         ArrayList<MainMenu> menu = readfile();
+        Icon icoAngle= IconFontSwing.buildIcon(FontAwesome.ANGLE_RIGHT, 10, new Color(135, 33, 150));
         try {
             for (MainMenu mainmenu : menu) {
                 JMenu mnuTemp = new JMenu();
-                mnuTemp.setText(mainmenu.getName());     
+                mnuTemp.setText(mainmenu.getName());
+                ImageIcon imagen = new ImageIcon(this.getClass().getClassLoader().getResource("image/" + mainmenu.getIcon() + ".png"));
+                mnuTemp.setIcon(imagen);
                 for (SubMenu submenu : mainmenu.getSub()) {
                     JMenuItem submTemp = new JMenuItem();
                     submTemp.setText(submenu.getName());
-                    submTemp.addActionListener(new MenuAction(submenu.getCode()));
+                    submTemp.setIcon(icoAngle);
+                    submTemp.addActionListener(new MenuAction(submenu.getCode(), app));
                     mnuTemp.add(submTemp);
                 }
                 menus.add(mnuTemp);

@@ -1,51 +1,67 @@
 [
     {
         "name": "Algoritmos",
+        "icon": "diagram",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "Android",
+        "icon": "android",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "Angular",
+        "icon": "angular",
         "sub": [
             {
                 "name": "Started",
-                "code": "alg01"
+                "code": "Base"
+            }
+        ]
+    },
+    {
+        "name": "AngularJs",
+        "icon": "angular",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "Base"
             }
         ]
     },
     {
         "name": "Bash",
+        "icon": "terminal",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "C",
+        "icon": "c",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "Consola",
+        "icon": "console",
         "sub": [
             {
                 "name": "Started",
@@ -55,86 +71,274 @@
     },
     {
         "name": "CSharp",
+        "icon": "csharp",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "CSS",
+        "icon": "css",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "Django",
+        "icon": "django",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "Docker",
+        "icon": "docker",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "GIT",
+        "icon": "git",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             }
         ]
     },
     {
         "name": "Java",
+        "icon": "java",
         "sub": [
             {
-                "name": "Started",
+                "name": "Base",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java Methods",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java Classes",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java File Handling",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java How To",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java Swing",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java JDBC",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java Otros",
                 "code": "alg01"
             },
             {
-                "name": "Started",
+                "name": "Java Reference Documentation",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "Javascript",
+        "icon": "javascript",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript Objects",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript Function Definitions",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript Classes",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript (Asynchronous) Callbacks",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript HTML DOM",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript Window - The Browser Object Model",
+                "code": "alg01"
+            },
+            {
+                "name": "Web APIs - Introduction",
+                "code": "alg01"
+            },
+            {
+                "name": "What is AJAX?",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript-JSON",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript Graphics",
+                "code": "alg01"
+            },
+            {
+                "name": "JavaScript Advanced",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "JQuery",
+        "icon": "jquery",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "Laravel",
+        "icon": "laravel",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "Markdown",
+        "icon": "markdown",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "Node.Js",
+        "icon": "nodejs",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "OOP",
+        "icon": "diagram",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            },
+            {
+                "name": "Patrones de disenio GoF",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "Python",
+        "icon": "python",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "PHP",
+        "icon": "php",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            },
+            {
+                "name": "PHP Forms",
+                "code": "alg01"
+            },
+            {
+                "name": "PHP Advanced",
+                "code": "alg01"
+            },
+            {
+                "name": "PHP OOP",
+                "code": "alg01"
+            },
+            {
+                "name": "PHP MySQL",
+                "code": "alg01"
+            },
+            {
+                "name": "PHP XML",
+                "code": "alg01"
+            },
+            {
+                "name": "PHP AJAX",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "Spring",
+        "icon": "spring-boot",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "SQL",
+        "icon": "sql",
+        "sub": [
+            {
+                "name": "Base",
+                "code": "alg01"
+            }
+        ]
+    },
+    {
+        "name": "TypeScript",
+        "icon": "typescript",
+        "sub": [
+            {
+                "name": "Base",
                 "code": "alg01"
             }
         ]
