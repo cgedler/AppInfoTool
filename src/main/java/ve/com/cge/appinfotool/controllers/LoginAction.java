@@ -44,7 +44,7 @@ public class LoginAction extends AbstractAction {
         
         this.login.close();
 
-        System.out.println("Boton pressed " + this.login.getCmbUsers() + " - " + this.login.getPwd());
+        //System.out.println("Boton pressed " + this.login.getCmbUsers() + " - " + this.login.getPwd());
 
     }
     

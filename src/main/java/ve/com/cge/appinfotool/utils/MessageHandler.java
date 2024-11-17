@@ -1,7 +1,6 @@
 
 package ve.com.cge.appinfotool.utils;
 
-import javax.swing.Icon;
 import javax.swing.JOptionPane;
 
 /**

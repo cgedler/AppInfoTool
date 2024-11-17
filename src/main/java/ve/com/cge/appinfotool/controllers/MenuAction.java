@@ -21,10 +21,7 @@ public class MenuAction extends AbstractAction {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(this.code);
-        
-        this.mdiApp.actualizarLista();
-        
+        this.mdiApp.updateList(this.code);
     }
     
 }

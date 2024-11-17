@@ -28,6 +28,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ve.com.cge.appinfotool.controllers.ExitAction;
 import ve.com.cge.appinfotool.utils.AppInfo;
+import ve.com.cge.appinfotool.utils.ListHandler;
 import ve.com.cge.appinfotool.utils.MenuHandler;
 
 /**
@@ -73,11 +74,14 @@ public class MDIApp extends JFrame {
             public void valueChanged(ListSelectionEvent e) {
                 if (!e.getValueIsAdjusting()) {
                     String value = list.getSelectedValue();
+                    
                     System.out.println("Valor: " + value);
+                    
+                    //buscar el archivo correspondiente y cargar el viewer
                 }
 
                 viewerPane.setText(
-                        "<b>hola</b><br>" + "<i>adios</i><br>"
+                        "<style>body { background-color:#242020;}</style><b>hola</b><br>" + "<i>adios</i><br>"
                         + "<font face=\"arial\">fuente arial</font><br>"
                         + "<font face=\"courier\">fuente courier</font><br>"
                         + "<font size=\"24\">fuente grande</font><br>"
@@ -167,11 +171,16 @@ public class MDIApp extends JFrame {
 
     }
 
-    public void actualizarLista() {
+    public void updateList(String code) {
+        // debe recibir el codigo y actualizar la lista
         listModel.clear();
-        listModel.addElement("Nuevo Elemento 1");
-        listModel.addElement("Nuevo Elemento 2");
-        listModel.addElement("Nuevo Elemento 3"); // Añade aquí los nuevos elementos }
+        // debe recibir una lista de string
+        ListHandler lh = new ListHandler();
+        String[] list = lh.getList(code);
+        //recorrer la lista e ir agreagando uno a uno
+        for (String item : list) {
+            listModel.addElement(item);
+        }
 
     }
 

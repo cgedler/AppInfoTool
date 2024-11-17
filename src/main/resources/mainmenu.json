@@ -5,7 +5,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "algorit01"
             }
         ]
     },
@@ -15,7 +15,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "android01"
             }
         ]
     },
@@ -25,7 +25,7 @@
         "sub": [
             {
                 "name": "Started",
-                "code": "Base"
+                "code": "angular01"
             }
         ]
     },
@@ -35,7 +35,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "Base"
+                "code": "angularjs01"
             }
         ]
     },
@@ -45,7 +45,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "bash01"
             }
         ]
     },
@@ -55,7 +55,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "c01"
             }
         ]
     },
@@ -65,7 +65,7 @@
         "sub": [
             {
                 "name": "Started",
-                "code": "alg01"
+                "code": "console01"
             }
         ]
     },
@@ -75,7 +75,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "csharp01"
             }
         ]
     },
@@ -85,7 +85,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "css01"
             }
         ]
     },
@@ -95,7 +95,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "django01"
             }
         ]
     },
@@ -105,7 +105,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "doker01"
             }
         ]
     },
@@ -115,7 +115,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "git01"
             }
         ]
     },
@@ -125,39 +125,39 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "java01"
             },
             {
                 "name": "Java Methods",
-                "code": "alg01"
+                "code": "java02"
             },
             {
                 "name": "Java Classes",
-                "code": "alg01"
+                "code": "java03"
             },
             {
                 "name": "Java File Handling",
-                "code": "alg01"
+                "code": "java04"
             },
             {
                 "name": "Java How To",
-                "code": "alg01"
+                "code": "java05"
             },
             {
                 "name": "Java Swing",
-                "code": "alg01"
+                "code": "java06"
             },
             {
                 "name": "Java JDBC",
-                "code": "alg01"
+                "code": "java07"
             },
             {
                 "name": "Java Otros",
-                "code": "alg01"
+                "code": "java08"
             },
             {
                 "name": "Java Reference Documentation",
-                "code": "alg01"
+                "code": "java09"
             }
         ]
     },
@@ -167,51 +167,51 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "js01"
             },
             {
                 "name": "JavaScript Objects",
-                "code": "alg01"
+                "code": "js02"
             },
             {
                 "name": "JavaScript Function Definitions",
-                "code": "alg01"
+                "code": "js03"
             },
             {
                 "name": "JavaScript Classes",
-                "code": "alg01"
+                "code": "js04"
             },
             {
                 "name": "JavaScript (Asynchronous) Callbacks",
-                "code": "alg01"
+                "code": "js05"
             },
             {
                 "name": "JavaScript HTML DOM",
-                "code": "alg01"
+                "code": "js06"
             },
             {
                 "name": "JavaScript Window - The Browser Object Model",
-                "code": "alg01"
+                "code": "js07"
             },
             {
                 "name": "Web APIs - Introduction",
-                "code": "alg01"
+                "code": "js08"
             },
             {
                 "name": "What is AJAX?",
-                "code": "alg01"
+                "code": "js09"
             },
             {
                 "name": "JavaScript-JSON",
-                "code": "alg01"
+                "code": "js10"
             },
             {
                 "name": "JavaScript Graphics",
-                "code": "alg01"
+                "code": "js11"
             },
             {
                 "name": "JavaScript Advanced",
-                "code": "alg01"
+                "code": "js12"
             }
         ]
     },
@@ -221,7 +221,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "jquery01"
             }
         ]
     },
@@ -231,7 +231,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "laravel01"
             }
         ]
     },
@@ -241,7 +241,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "markdown01"
             }
         ]
     },
@@ -251,7 +251,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "node01"
             }
         ]
     },
@@ -261,11 +261,11 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "oop01"
             },
             {
                 "name": "Patrones de disenio GoF",
-                "code": "alg01"
+                "code": "oop02"
             }
         ]
     },
@@ -275,7 +275,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "python01"
             }
         ]
     },
@@ -285,31 +285,31 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "php01"
             },
             {
                 "name": "PHP Forms",
-                "code": "alg01"
+                "code": "php02"
             },
             {
                 "name": "PHP Advanced",
-                "code": "alg01"
+                "code": "php03"
             },
             {
                 "name": "PHP OOP",
-                "code": "alg01"
+                "code": "php04"
             },
             {
                 "name": "PHP MySQL",
-                "code": "alg01"
+                "code": "php05"
             },
             {
                 "name": "PHP XML",
-                "code": "alg01"
+                "code": "php06"
             },
             {
                 "name": "PHP AJAX",
-                "code": "alg01"
+                "code": "php07"
             }
         ]
     },
@@ -319,7 +319,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "spring01"
             }
         ]
     },
@@ -329,7 +329,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "sql01"
             }
         ]
     },
@@ -339,7 +339,7 @@
         "sub": [
             {
                 "name": "Base",
-                "code": "alg01"
+                "code": "ts01"
             }
         ]
     }
