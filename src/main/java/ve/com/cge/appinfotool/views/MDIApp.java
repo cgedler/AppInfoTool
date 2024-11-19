@@ -1,12 +1,10 @@
 package ve.com.cge.appinfotool.views;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.DefaultListModel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -30,6 +28,7 @@ import ve.com.cge.appinfotool.controllers.ExitAction;
 import ve.com.cge.appinfotool.utils.AppInfo;
 import ve.com.cge.appinfotool.utils.ListHandler;
 import ve.com.cge.appinfotool.utils.MenuHandler;
+import ve.com.cge.appinfotool.utils.ViewerHandler;
 
 /**
  *
@@ -50,9 +49,11 @@ public class MDIApp extends JFrame {
     private JDesktopPane desktopPane;
     private JSplitPane splitPane;
     private JScrollPane scrollPane;
+    private JScrollPane viewerScrollPane;
     private JEditorPane viewerPane;
     private JList<String> list;
     private DefaultListModel<String> listModel;
+    private String code;
 
     public MDIApp(AppInfo appInfo) {
         this.appInfo = appInfo;
@@ -63,30 +64,20 @@ public class MDIApp extends JFrame {
         desktopPane = new JDesktopPane();
         splitPane = new JSplitPane();
         viewerPane = new JEditorPane();
+        viewerScrollPane = new JScrollPane(viewerPane);
 
         listModel = new DefaultListModel<>();
-        listModel.addElement("Elemento 1");
-        listModel.addElement("Elemento 2");
-        listModel.addElement("Elemento 3");
+        listModel.addElement("Elemento");
         list = new JList<>(listModel);
         list.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 if (!e.getValueIsAdjusting()) {
                     String value = list.getSelectedValue();
-                    
-                    System.out.println("Valor: " + value);
-                    
-                    //buscar el archivo correspondiente y cargar el viewer
+                    ViewerHandler vh = new ViewerHandler();
+                    String content = vh.getContent(code, value);
+                    viewerPane.setText(content);
                 }
-
-                viewerPane.setText(
-                        "<style>body { background-color:#242020;}</style><b>hola</b><br>" + "<i>adios</i><br>"
-                        + "<font face=\"arial\">fuente arial</font><br>"
-                        + "<font face=\"courier\">fuente courier</font><br>"
-                        + "<font size=\"24\">fuente grande</font><br>"
-                        + "<font color=\"red\">color rojo</font><br>");
-
             }
         });
 
@@ -153,7 +144,7 @@ public class MDIApp extends JFrame {
         scrollPane = new JScrollPane(list);
 
         splitPane.setLeftComponent(scrollPane);
-        splitPane.setRightComponent(viewerPane);
+        splitPane.setRightComponent(viewerScrollPane);
         //scrollPane
         desktopPane.setLayout(new GridLayout(1, 1));
 
@@ -172,16 +163,17 @@ public class MDIApp extends JFrame {
     }
 
     public void updateList(String code) {
-        // debe recibir el codigo y actualizar la lista
         listModel.clear();
-        // debe recibir una lista de string
+        this.code = code;
         ListHandler lh = new ListHandler();
-        String[] list = lh.getList(code);
-        //recorrer la lista e ir agreagando uno a uno
+        List<String> list = lh.getList(code);
+
         for (String item : list) {
+            System.out.println(item);
             listModel.addElement(item);
         }
-
+        String total = "Total: " + list.size();
+        listModel.addElement(total);
     }
 
 }

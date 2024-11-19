@@ -8,12 +8,14 @@ package ve.com.cge.appinfotool.models;
 public class ListMenu {
     
     private String title;
+    private String file;
 
     public ListMenu() {
     }
 
-    public ListMenu(String title) {
+    public ListMenu(String title, String file) {
         this.title = title;
+        this.file = file;
     }
 
     public String getTitle() {
@@ -23,5 +25,13 @@ public class ListMenu {
     public void setTitle(String title) {
         this.title = title;
     }
-    
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
 }

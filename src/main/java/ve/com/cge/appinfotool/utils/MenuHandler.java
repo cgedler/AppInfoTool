@@ -11,6 +11,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import jiconfont.icons.font_awesome.FontAwesome;
 import jiconfont.swing.IconFontSwing;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ve.com.cge.appinfotool.controllers.MenuAction;
 import ve.com.cge.appinfotool.models.MainMenu;
 import ve.com.cge.appinfotool.models.SubMenu;
@@ -21,6 +23,9 @@ import ve.com.cge.appinfotool.views.MDIApp;
  * @author cge
  */
 public class MenuHandler {
+    
+    private static final Logger logger = LogManager.getLogger(MenuHandler.class);
+    private static final String LOOK = java.util.ResourceBundle.getBundle("app").getString("LOOK");
 
     public ArrayList<JMenu> menuList(MDIApp app) {
         ArrayList<JMenu> menus = new ArrayList<JMenu>();
@@ -30,8 +35,10 @@ public class MenuHandler {
             for (MainMenu mainmenu : menu) {
                 JMenu mnuTemp = new JMenu();
                 mnuTemp.setText(mainmenu.getName());
-                ImageIcon imagen = new ImageIcon(this.getClass().getClassLoader().getResource("image/" + mainmenu.getIcon() + ".png"));
-                mnuTemp.setIcon(imagen);
+                if (!LOOK.equals("6")) {
+                    ImageIcon imagen = new ImageIcon(this.getClass().getClassLoader().getResource("image/" + mainmenu.getIcon() + ".png"));
+                    mnuTemp.setIcon(imagen);
+                }
                 for (SubMenu submenu : mainmenu.getSub()) {
                     JMenuItem submTemp = new JMenuItem();
                     submTemp.setText(submenu.getName());
