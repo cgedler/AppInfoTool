@@ -12,11 +12,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ve.com.cge.appinfotool.models.User;
 import ve.com.cge.appinfotool.utils.DataBaseHandler;
-import ve.com.cge.appinfotool.utils.MessageHandler;
 
 /**
- *
- * @author cge
+ * UserService : This is the class of service of the users.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class UserService {
     
@@ -38,7 +40,7 @@ public class UserService {
             }
             rs.close();
         } catch (SQLException ex) {
-            logger.error("Failed to get list of users", ex);
+            logger.error("Failed to get list of all users", ex);
         }
         return listUsers;
     }
@@ -58,7 +60,7 @@ public class UserService {
             }
             rs.close();
         } catch (SQLException ex) {
-            logger.error("Failed to get list of users", ex);
+            logger.error("Failed to get user by username", ex);
         }
         return user;
     }

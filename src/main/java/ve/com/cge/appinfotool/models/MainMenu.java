@@ -4,8 +4,11 @@ package ve.com.cge.appinfotool.models;
 import java.util.List;
 
 /**
- *
- * @author cge
+ * MainMenu : This is the main menu model class
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class MainMenu {
     

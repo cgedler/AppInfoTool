@@ -6,8 +6,11 @@ import org.apache.logging.log4j.Logger;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
- *
- * @author cge
+ * PasswordHandler : This is the class in charge of handling password encryption and comparing and validating hashes.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class PasswordHandler {
     

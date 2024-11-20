@@ -11,8 +11,11 @@ import org.apache.logging.log4j.Logger;
 import ve.com.cge.appinfotool.models.ListMenu;
 
 /**
- *
- * @author cge
+ * ListHandler : This is the class in charge of handling the loading of the menu list by reading from a json file.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class ListHandler {
     
@@ -28,8 +31,8 @@ public class ListHandler {
             for (ListMenu item : listMenu) {
                 list.add(item.getTitle());
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logger.error("Failed to get list menu", ex);
         }
         return list;
     }

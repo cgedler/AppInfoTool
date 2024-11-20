@@ -5,8 +5,11 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
- * @author cge
+ * User : This is the model class of the users
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class User implements Serializable {
     

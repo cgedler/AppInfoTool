@@ -2,8 +2,11 @@
 package ve.com.cge.appinfotool.models;
 
 /**
- *
- * @author cge
+ * SubMenu : This is the model class of the main sub menu
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class SubMenu {
     
@@ -33,7 +36,5 @@ public class SubMenu {
     public void setCode(String code) {
         this.code = code;
     }
-    
-    
      
 }

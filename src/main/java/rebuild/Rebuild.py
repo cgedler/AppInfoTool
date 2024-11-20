@@ -1,6 +1,8 @@
-# Created on : 18 nov 2024, 10:42:51
-# Author     : cge
-
+"""
+    Created on : Nov 19, 2024
+    Author : Christopher Gedler <cgedler@gmail.com>
+    version : 1.0
+"""
 
 import io
 import json

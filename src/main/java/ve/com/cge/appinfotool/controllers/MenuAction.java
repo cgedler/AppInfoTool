@@ -6,8 +6,11 @@ import javax.swing.AbstractAction;
 import ve.com.cge.appinfotool.views.MDIApp;
 
 /**
- *
- * @author cge
+ * MenuAction : This is the action class that updates the menu list by group code.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class MenuAction extends AbstractAction {
     

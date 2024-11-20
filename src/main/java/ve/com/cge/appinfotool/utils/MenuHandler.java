@@ -19,8 +19,11 @@ import ve.com.cge.appinfotool.models.SubMenu;
 import ve.com.cge.appinfotool.views.MDIApp;
 
 /**
- *
- * @author cge
+ * MenuHandler : This is the class in charge of handling the loading of the menu and submenu by reading from a json file.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class MenuHandler {
     
@@ -48,8 +51,8 @@ public class MenuHandler {
                 }
                 menus.add(mnuTemp);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logger.error("Failed to get menu list", ex);;
         }
         return menus;
     }
@@ -60,8 +63,8 @@ public class MenuHandler {
             File file = new File(this.getClass().getClassLoader().getResource("mainmenu.json").getFile());
             ObjectMapper mapper = new ObjectMapper();
             menu = mapper.readValue(file, new TypeReference<ArrayList<MainMenu>>(){});
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logger.error("Failed to get file main menu", ex);
         }
         return menu;
     }

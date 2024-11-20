@@ -22,23 +22,24 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import jiconfont.icons.font_awesome.FontAwesome;
 import jiconfont.swing.IconFontSwing;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import ve.com.cge.appinfotool.controllers.AboutAction;
 import ve.com.cge.appinfotool.controllers.ExitAction;
+import ve.com.cge.appinfotool.controllers.JasperAction;
 import ve.com.cge.appinfotool.utils.AppInfo;
 import ve.com.cge.appinfotool.utils.ListHandler;
 import ve.com.cge.appinfotool.utils.MenuHandler;
 import ve.com.cge.appinfotool.utils.ViewerHandler;
 
 /**
- *
- * @author cge
+ * MDIApp : This is the class of the mdi screen
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class MDIApp extends JFrame {
 
-    private static final Logger logger = LogManager.getLogger(MDIApp.class);
-
-    private AppInfo appInfo;
+    public AppInfo appInfo;
     private JMenuBar menuBar;
     private JMenu mnuFile;
     private JMenuItem mniSave;
@@ -122,36 +123,30 @@ public class MDIApp extends JFrame {
         mniContent.setMnemonic('c');
         mniContent.setText("Contents");
         mniContent.setIcon(icoContent);
+        mniContent.addActionListener(new JasperAction(this));
         mnuHelp.add(mniContent);
 
         mniAbout.setMnemonic('a');
         mniAbout.setText("About");
         mniAbout.setIcon(icoAbout);
+        mniAbout.addActionListener(new AboutAction(this));
         mnuHelp.add(mniAbout);
-
+        
         MenuHandler menuHandler = new MenuHandler();
         ArrayList<JMenu> menus = new ArrayList<JMenu>();
         menus = menuHandler.menuList(this);
         for (JMenu men : menus) {
             menuBar.add(men);
         }
-
         menuBar.add(mnuHelp);
         setJMenuBar(menuBar);
-
+        
         viewerPane.setContentType("text/html");
-
         scrollPane = new JScrollPane(list);
-
         splitPane.setLeftComponent(scrollPane);
         splitPane.setRightComponent(viewerScrollPane);
-        //scrollPane
         desktopPane.setLayout(new GridLayout(1, 1));
-
         desktopPane.add(splitPane);
-        //desktopPane.add(sidebar);
-        //desktopPane.add(viewerPane);
-
         add(desktopPane);
 
         setExtendedState(Frame.MAXIMIZED_BOTH);
@@ -167,9 +162,7 @@ public class MDIApp extends JFrame {
         this.code = code;
         ListHandler lh = new ListHandler();
         List<String> list = lh.getList(code);
-
         for (String item : list) {
-            System.out.println(item);
             listModel.addElement(item);
         }
         String total = "Total: " + list.size();

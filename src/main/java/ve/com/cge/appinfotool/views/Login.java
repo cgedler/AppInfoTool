@@ -30,8 +30,11 @@ import ve.com.cge.appinfotool.utils.AppInfo;
 import ve.com.cge.appinfotool.utils.MessageHandler;
 
 /**
- *
- * @author cge
+ * Login : This is the login screen class
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class Login extends JFrame {
     

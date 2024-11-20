@@ -12,8 +12,11 @@ import javax.swing.SwingConstants;
 import ve.com.cge.appinfotool.utils.AppInfo;
 
 /**
- *
- * @author cge
+ * SplashScreen : This is the welcome screen of the application.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class SplashScreen extends JWindow {
     

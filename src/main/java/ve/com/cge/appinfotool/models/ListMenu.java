@@ -2,8 +2,11 @@
 package ve.com.cge.appinfotool.models;
 
 /**
- *
- * @author cge
+ * ListMenu : This is the menu list model class.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class ListMenu {
     

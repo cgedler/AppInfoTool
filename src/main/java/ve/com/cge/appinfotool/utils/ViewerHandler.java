@@ -11,8 +11,11 @@ import org.apache.logging.log4j.Logger;
 import ve.com.cge.appinfotool.models.ListMenu;
 
 /**
- *
- * @author cge
+ * ViewerHandler : This is the class in charge of managing the search for the content that will be displayed in the HTML viewer.
+ * 
+ * @author Christopher Gedler <cgedler@gmail.com>
+ * @version 1.0
+ * @since Nov 19, 2024
  */
 public class ViewerHandler {
 
@@ -33,8 +36,8 @@ public class ViewerHandler {
             }
             reader.close();
             content = str.toString();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ex) {
+            logger.error("Failed to get content", ex); 
         }
         return content;
     }
@@ -52,8 +55,8 @@ public class ViewerHandler {
                     fileName = item.getFile();
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            logger.error("Failed to get file name", ex);
         }
         return fileName;
     }
@@ -70,8 +73,8 @@ public class ViewerHandler {
             }
             reader.close();
             content = str.toString();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ex) {
+            logger.error("Failed to get file style css", ex);
         }
         return content;
     }
